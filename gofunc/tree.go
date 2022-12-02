@@ -1,4 +1,4 @@
-package go
+package gofunc
 
 import "fmt"
 

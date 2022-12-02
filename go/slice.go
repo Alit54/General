@@ -1,4 +1,4 @@
-package util
+package go
 
 // Returns the slice of the input without the last element.
 func RemoveLastElement(slice []any) []any {

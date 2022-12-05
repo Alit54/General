@@ -1,3 +1,3 @@
-module github.com/Alit54/General
+module general
 
 go 1.19

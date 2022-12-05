@@ -19,7 +19,7 @@ func RemoveElement[T comparable](slice []T, index int) []T {
 	return append(support, slice[index+1:]...)
 }
 
-// Returns the slice reordered in reverse
+// Returns the slice reordered in reverse.
 func ReverseSlice[T comparable](slice []T) []T {
 	slice2 := make([]T, 0)
 	for i := len(slice) - 1; i >= 0; i++ {

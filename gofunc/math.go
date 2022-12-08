@@ -50,18 +50,20 @@ func Product(values ...int) int {
 
 // Returns TRUE if all values are TRUE. FALSE otherwise.
 func AND(values ...bool) bool {
-	flag := true
 	for _, v := range values {
-		flag = flag && v
+		if !v {
+			return false
+		}
 	}
-	return flag
+	return true
 }
 
 // Returns FALSE if all values are FALSE. TRUE otherwise.
 func OR(values ...bool) bool {
-	flag := false
 	for _, v := range values {
-		flag = flag || v
+		if v {
+			return true
+		}
 	}
-	return flag
+	return false
 }

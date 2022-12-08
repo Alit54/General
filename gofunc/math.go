@@ -47,3 +47,21 @@ func Product(values ...int) int {
 	}
 	return product
 }
+
+// Returns TRUE if all values are TRUE. FALSE otherwise.
+func AND(values ...bool) bool {
+	flag := true
+	for _, v := range values {
+		flag = flag && v
+	}
+	return flag
+}
+
+// Returns FALSE if all values are FALSE. TRUE otherwise.
+func OR(values ...bool) bool {
+	flag := false
+	for _, v := range values {
+		flag = flag || v
+	}
+	return flag
+}

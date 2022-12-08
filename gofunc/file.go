@@ -32,7 +32,7 @@ func ReadRows(name string) []string {
 func ReadMatrixInt(name string) [][]int {
 	var input [][]int
 	var sliceInt []int
-	file := Alit.File(name)
+	file := File(name)
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {

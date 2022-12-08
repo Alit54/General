@@ -41,7 +41,7 @@ func Sum(values ...int) int {
 
 // Returns product of values.
 func Product(values ...int) int {
-	product := 0
+	product := 1
 	for _, v := range values {
 		product *= v
 	}

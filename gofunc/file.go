@@ -46,3 +46,20 @@ func ReadMatrixInt(name string) [][]int {
 	}
 	return input
 }
+
+// Returns a slice of Bytes read from a file.
+func ReadMatrixByte(name string) [][]byte {
+	var input [][]byte
+	var slice []byte
+	file := File(name)
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		row := strings.Split(scanner.Text(), "")
+		for _, v := range row {
+			slice = append(slice, v[0])
+		}
+		input = append(input, slice)
+	}
+	return input
+}

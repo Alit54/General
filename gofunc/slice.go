@@ -26,3 +26,14 @@ func ReverseSlice[T comparable](slice []T) []T {
 	}
 	return slice
 }
+
+// Returns the position of element in the slice. If there is no element, returns an empty slice.
+func ResearchElement[T comparable](slice []T, element T) []int {
+	support := make([]int, 0)
+	for k, v := range slice {
+		if v == element {
+			support = append(support, k)
+		}
+	}
+	return support
+}

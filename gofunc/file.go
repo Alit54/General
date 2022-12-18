@@ -60,6 +60,7 @@ func ReadMatrixByte(name string) [][]byte {
 			slice = append(slice, v[0])
 		}
 		input = append(input, slice)
+		slice = make([]byte, 0)
 	}
 	return input
 }

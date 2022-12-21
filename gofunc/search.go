@@ -1,8 +1,8 @@
 package gofunc
 
 type Position struct {
-	row    int
-	column int
+	Row    int
+	Column int
 }
 
 // Returns the minimun number of steps made from start to finish, using a UCS and a list of expanded nodes. (UCS + EXL)

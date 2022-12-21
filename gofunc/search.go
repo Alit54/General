@@ -1,8 +1,13 @@
 package gofunc
 
-type Position struct {
-	Row    int
-	Column int
+// Returns the Manhattan Distance between 2 points.
+func Manhattan(start, finish Position) int {
+	return Absolute(start.Column-finish.Column) + Absolute(start.Row-finish.Row)
+}
+
+// Returns the Pithagorican Distance between 2 points.
+func Distance(start, finish Position) float64 {
+	return (Sqrt((start.Column-finish.Column)*(start.Column-finish.Column) + (start.Row-finish.Row)*(start.Row-finish.Row)))
 }
 
 // Returns the minimun number of steps made from start to finish, using a UCS and a list of expanded nodes. (UCS + EXL)

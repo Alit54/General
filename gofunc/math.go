@@ -31,7 +31,7 @@ func Min(values ...int) int {
 }
 
 // Returns sum of values.
-func Sum[T Ordered](values ...T) T {
+func Sum[T Number](values ...T) T {
 	var sum T = 0
 	for _, v := range values {
 		sum += v
@@ -40,7 +40,7 @@ func Sum[T Ordered](values ...T) T {
 }
 
 // Returns product of values.
-func Product[T Ordered](values ...T) T {
+func Product[T Number](values ...T) T {
 	var product T = 1
 	for _, v := range values {
 		product *= v
@@ -49,7 +49,7 @@ func Product[T Ordered](values ...T) T {
 }
 
 // Returns the Absolute Value of a number.
-func Absolute[T Ordered](value T) T {
+func Absolute[T Number](value T) T {
 	if value < 0 {
 		return -value
 	}
@@ -57,7 +57,7 @@ func Absolute[T Ordered](value T) T {
 }
 
 // Returns the Square Root of a positive number.
-func Sqrt[T Ordered](value T) float64 {
+func Sqrt[T Number](value T) float64 {
 	if value < 0 {
 		panic("Number must be positive.")
 	}

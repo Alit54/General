@@ -13,8 +13,11 @@ type Integer interface {
 type Float interface {
 	~float32 | ~float64
 }
-type Ordered interface {
+type Number interface {
 	Integer | Float
+}
+type Ordered interface {
+	Number | ~string | ~byte | ~rune
 }
 
 // Struct
